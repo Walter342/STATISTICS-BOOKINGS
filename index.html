@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stats Booking</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+
+<body>
+
+<div class="main-container">
+    
+    <!-- DASHBOARD SECTION -->
+    <div class="dashboard">
+        <h2>📊 Booking Dashboard</h2>
+        <p class="dashboard-subtitle">Real-time slot availability</p>
+        
+        <div class="stats-summary">
+            <div class="stat-card">
+                <h3>📅 Total Slots</h3>
+                <p id="totalSlots">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>👥 Total Bookings</h3>
+                <p id="totalBookings">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>✅ Available Slots</h3>
+                <p id="availableSlots">0</p>
+            </div>
+        </div>
+
+        <div id="slotsGrid" class="slots-grid"></div>
+    </div>
+
+    <!-- BOOKING FORM SECTION -->
+    <div class="container">
+        <h1>📊 Statistics Booking</h1>
+        <p class="subtitle">#STATS IS FUN</p>
+        <p class="location">💻 Online Consultation</p>
+
+        <form id="bookingForm">
+            <div class="input-group">
+                <input type="text" id="name" required>
+                <label>Full Name</label>
+            </div>
+
+            <div class="input-group">
+                <input type="email" id="email" required>
+                <label>Email Address</label>
+            </div>
+
+            <div class="input-group">
+                <input type="date" id="date" required>
+            </div>
+
+            <div class="input-group">
+                <select id="time">
+                    <option value="">Select time slot</option>
+                </select>
+            </div>
+
+            <button type="submit">📚 Book Session</button>
+        </form>
+
+        <p id="message"></p>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
